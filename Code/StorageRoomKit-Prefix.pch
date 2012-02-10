@@ -1,0 +1,8 @@
+//
+// Prefix header for all source files of the 'StorageRoomKit' target in the 'StorageRoomKit' project
+//
+
+#ifdef __OBJC__
+  #import <Foundation/Foundation.h>
+  #import <RestKit/RestKit.h>
+#endif
