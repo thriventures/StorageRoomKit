@@ -58,6 +58,7 @@ This is a walkthrough with all steps for a simple usage scenario of the library.
 
 1. Import the headers
 
+        #import <RestKit/RestKit.h>
         #import <StorageRoomKit/StorageRoomKit.h>
 
 1. Add the SREntry protocol to your custom class
