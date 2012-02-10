@@ -18,25 +18,35 @@ Main Features
 Installation into your Project
 ------------------------------
 
-1. Add RestKit to your project
-  * Follow RestKit's detailed installation instructions at:
-    * https://github.com/RestKit/RestKit/blob/master/README.md
-    * https://github.com/RestKit/RestKit/wiki/Installing-RestKit-in-Xcode-4.x
+1. Add RestKit to your project by following the detailed installation instructions:
+  * https://github.com/RestKit/RestKit/blob/master/README.md
+  * https://github.com/RestKit/RestKit/wiki/Installing-RestKit-in-Xcode-4.x
+  * The latest RestKit version that was tested with StorageRoomKit is c19a500ca8145295e0a518019c036e585dc42094. Newer versions might work, but don't have to.
 1. Add StorageRoomKit to your project
-  1. Add a submodule: `git submodule add git://github.com/thriventures/StorageRoomKit.git StorageRoomKit`
-    * Please note that RestKit and StorageRoomKit **must be siblings** in the directory structure of your project! You can add both submodules to the base directory or to a common subdirectory (e.g. Vendor/RestKit and Vendor/StorageRoomKit).
+  1. Add a new git submodule: `git submodule add git://github.com/thriventures/StorageRoomKit.git StorageRoomKit`
+  
+      * Please note that RestKit and StorageRoomKit **must be siblings** in the directory structure of your project! You can add both submodules to the base directory or to a common subdirectory (e.g. Vendor/RestKit and Vendor/StorageRoomKit).
+    
   1. Add a cross-project reference by dragging **StorageRoomKit.xcodeproj** to your own project
-  1. Open build settings editor for your project
-    * Add **Other Linker Flags** for `-ObjC -all_load`
-    * Add the following **Header Search Paths**:
-      * `"$(BUILD_DIR)/include"`
-  1. Open target settings editor for the target you want to link StorageRoomKit into
-    * Add direct dependency on the **StorageRoomKit** aggregate target
-    * Link against StorageRoomKit:
+  1. Open build settings editor for your project and the following **Header Search Paths** for the paths you used above, otherwise archiving will fail:
+
+      * `"$(SOURCE_ROOT)/RestKit/Build"`
+      * `"$(SOURCE_ROOT)/StorageRoomKit/Build"`
+
+  1. Open target settings editor for the target you want to link StorageRoomKit into and add direct dependencies:
+  
+      * StorageRoomKit (iOS)
+      * StorageRoomKitFramework (Mac OS X)
+      
+  1. Link against the library:
+  
       * **libStorageRoomKit.a** (iOS)
-      * **StorageRoomKitFramework** (Mac OS X)
+      * **StorageRoomKitFramework.framework** (Mac OS X)
+      
   1. Import the StorageRoomKit headers
-    * `#import <StorageRoomKit/StorageRoomKit.h>`
+  
+      * `#import <StorageRoomKit/StorageRoomKit.h>`
+      
   1. Build the project to verify installation is successful.
 
 
@@ -107,7 +117,7 @@ Documentation
 
 The StorageRoom API Documentation (http://storageroomapp.com/documentation) contains further information about the web service.
 
-An **example Project** on how to use StorageRoomKit is available at http://github.com/thriventures/StorageRoomCatalog.
+An **Example Project** on how to use StorageRoomKit is available at http://github.com/thriventures/StorageRoomCatalog.
 
 
 StorageRoom without StorageRoomKit
