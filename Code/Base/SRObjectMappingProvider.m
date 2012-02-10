@@ -10,13 +10,9 @@
 
 #import "SRObjectManager.h"
 #import "SRObjectManager+Private.h"
-//#import "RKLog.h"
-//#import "RKObjectMapping.h"
 #import "SRObject.h"
 #import "SREntry.h"
 
-//#undef RKLogComponent
-//#define RKLogComponent lcl_cStorageRoomKitObjectMapping
 
 @implementation SRObjectMappingProvider
 

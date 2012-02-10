@@ -10,10 +10,7 @@
 
 #import "SRObjectManager.h"
 #import "SRHelpers.h"
-//#import "RKObjectMapping.h"
 
-//#undef RKLogComponent
-//#define RKLogComponent lcl_cStorageRoomKitObjectMapping
 
 @implementation SREntryMappingDelegate
 

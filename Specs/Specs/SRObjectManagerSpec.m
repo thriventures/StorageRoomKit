@@ -8,14 +8,12 @@
 #import "SRField.h"
 #import "SRCollection.h"
 #import "SREntryProtocol.h"
-//#import "RKMIMETypes.h"
 #import "SRRouter.h"
 #import "SREntry.h"
 #import "SRStringField.h"
 #import "SRLocationField.h"
 #import "SRObjectMappingProvider.h"
 
-//#import <RestKit/ObjectMapping/RKErrorMessage.h>
 
 @interface SRTest : NSObject {}
 @end

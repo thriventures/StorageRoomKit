@@ -10,10 +10,7 @@
 
 #import <objc/runtime.h>
 #import "SRHelpers.h"
-//#import "RKLog.h"
 
-//#undef RKLogComponent
-//#define RKLogComponent lcl_cStorageRoomKitObjectMapping
 
 id getterImplementation(id self, SEL _cmd);
 void setterImplementation(id self, SEL _cmd, id aValue);

@@ -19,10 +19,6 @@
 #import "SRObject+Private.h"
 #import "SRObjectManager.h"
 #import "SRHelpers.h"
-//#import "RKLog.h"
-
-//#undef RKLogComponent
-//#define RKLogComponent lcl_cStorageRoomKitObjectMapping
 
 void deallocImplementation(id self, SEL _cmd);
 

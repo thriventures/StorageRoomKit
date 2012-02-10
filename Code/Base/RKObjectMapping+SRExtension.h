@@ -6,7 +6,6 @@
 //  Copyright 2011 Thriventures. All rights reserved.
 //
 
-//#import "../../ObjectMapping/RKObjectMapping.h"
 
 /**
  * StorageRoomKit additions to RKObjectMapping.

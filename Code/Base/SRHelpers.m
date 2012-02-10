@@ -10,12 +10,7 @@
 
 #import "objc/runtime.h"
 #import "NSString+InflectionSupport.h"
-//#import "NSString+RestKit.h"
-//#import "RKClient.h"
 #import "SRObjectManager.h"
-
-#undef RKLogComponent
-#define RKLogComponent lcl_cStorageRoomKit
 
 #pragma mark -
 #pragma mark Path/URL helpers

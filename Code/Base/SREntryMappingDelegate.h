@@ -6,7 +6,6 @@
 //  Copyright 2011 Thriventures. All rights reserved.
 //
 
-//#import "RKDynamicObjectMapping.h"
 
 /**
  * Returns the appropriate RKObjectMapping for a StorageRoom Resource based on the "@type" attribute.

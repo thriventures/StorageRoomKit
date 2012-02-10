@@ -4,7 +4,6 @@
 #import "SRCollection.h"
 #import "SREntry.h"
 #import "SREntryProtocol.h"
-//#import "RKObjectMapping.h"
 
 @interface SRComment : NSObject <SREntry>
 

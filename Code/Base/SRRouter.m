@@ -12,8 +12,6 @@
 #import "SREntryProtocol.h"
 #import "SRHelpers.h"
 
-#undef RKLogComponent
-#define RKLogComponent lcl_cStorageRoomKitNetwork
 
 @implementation SRRouter
 

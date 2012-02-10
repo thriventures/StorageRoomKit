@@ -10,17 +10,11 @@
 
 #import "SRObject+Private.h"
 #import "SREntryMappingDelegate.h"
-
-//#import "RKObjectMapping.h"
-//#import "RKDynamicObjectMapping.h"
 #import "SRModel.h"
 #import "SREntry.h"
 #import "SREmbedded.h"
 #import "SRHelpers.h"
-//#import "RKLog.h"
 
-//#undef RKLogComponent
-//#define RKLogComponent lcl_cStorageRoomKitObjectMapping
 
 
 @implementation SRObject

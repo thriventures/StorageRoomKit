@@ -14,17 +14,13 @@
 #import "SRMappableObject.h"
 
 #import "NSString+InflectionSupport.h"
-//#import "RKErrorMessage.h"
+
 #import <RestKit/RKErrorMessage.h>
 #import "SREntryProtocol.h"
 #import "SRRouter.h"
 #import "SRObjectMappingProvider.h"
-//#import "RKLog.h"
 #import "SRHelpers.h"
-//#import "RKMIMETypes.h"
 
-//#undef RKLogComponent
-//#define RKLogComponent lcl_cStorageRoomKitObjectMapping
 
 #define kCurrentVersion @"0.2.0"
 
