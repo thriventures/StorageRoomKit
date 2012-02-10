@@ -107,6 +107,8 @@ Documentation
 
 The StorageRoom API Documentation (http://storageroomapp.com/documentation) contains further information about the web service.
 
+An **example Project** on how to use StorageRoomKit is available at http://github.com/thriventures/StorageRoomCatalog.
+
 
 StorageRoom without StorageRoomKit
 ------------------------------
