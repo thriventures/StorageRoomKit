@@ -312,6 +312,8 @@
 		53DBF99A14E5091200BFA012 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53DBF99914E5091200BFA012 /* UIKit.framework */; };
 		53DBF99B14E5091200BFA012 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53DBF98914E5091200BFA012 /* Foundation.framework */; };
 		53DBF99E14E5091200BFA012 /* libStorageRoomKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 53DBF98614E5091200BFA012 /* libStorageRoomKit.a */; };
+		53F4BD501610AF2200EF1309 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53F4BD4F1610AF2200EF1309 /* CoreGraphics.framework */; };
+		53F4BD521610AF5B00EF1309 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53F4BD511610AF5B00EF1309 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -363,6 +365,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 53DBF98514E5091200BFA012;
 			remoteInfo = StorageRoomKit;
+		};
+		53F4BD4C1610ABB500EF1309 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5339DC3014E50B0D003BED86 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 259C301615128079003066A2;
+			remoteInfo = RestKitResources;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -672,6 +681,8 @@
 		53DBF99714E5091200BFA012 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		53DBF99914E5091200BFA012 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		53DBF9A114E5091200BFA012 /* StorageRoomKitSpecs-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StorageRoomKitSpecs-Info.plist"; sourceTree = "<group>"; };
+		53F4BD4F1610AF2200EF1309 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		53F4BD511610AF5B00EF1309 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -708,6 +719,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53F4BD521610AF5B00EF1309 /* QuartzCore.framework in Frameworks */,
+				53F4BD501610AF2200EF1309 /* CoreGraphics.framework in Frameworks */,
 				531B0C5D14E51F5D00B5E628 /* libRestKit.a in Frameworks */,
 				5369E43B14E50CC1007B5628 /* libxml2.dylib in Frameworks */,
 				5369E43A14E50CB6007B5628 /* SystemConfiguration.framework in Frameworks */,
@@ -743,6 +756,7 @@
 				5339DC3A14E50B0D003BED86 /* RestKitTests.octest */,
 				5339DC3C14E50B0D003BED86 /* RestKit.framework */,
 				5339DC3E14E50B0D003BED86 /* RestKitFrameworkTests.octest */,
+				53F4BD4D1610ABB500EF1309 /* RestKitResources.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -966,6 +980,8 @@
 		53DBF97B14E5091100BFA012 = {
 			isa = PBXGroup;
 			children = (
+				53F4BD511610AF5B00EF1309 /* QuartzCore.framework */,
+				53F4BD4F1610AF2200EF1309 /* CoreGraphics.framework */,
 				5361D98914E50F3500F3C9D5 /* TODO */,
 				538CA9DD14E5337500449A3F /* LICENSE */,
 				538CA9DE14E5337500449A3F /* README.md */,
@@ -1559,6 +1575,13 @@
 			remoteRef = 5339DC3D14E50B0D003BED86 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		53F4BD4D1610ABB500EF1309 /* RestKitResources.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RestKitResources.bundle;
+			remoteRef = 53F4BD4C1610ABB500EF1309 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -1942,6 +1965,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -1962,6 +1986,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -1981,7 +2006,10 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Code/StorageRoomKit-Prefix.pch";
-				HEADER_SEARCH_PATHS = "\"$(SOURCE_ROOT)/../RestKit/Build\"";
+				HEADER_SEARCH_PATHS = (
+					"\"$(SOURCE_ROOT)/../RestKit/Build\"",
+					"\"$(BUILT_PRODUCTS_DIR)/../../Headers\"",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRIVATE_HEADERS_FOLDER_PATH = "$(PUBLIC_HEADERS_FOLDER_PATH)/Private";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1999,7 +2027,10 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Code/StorageRoomKit-Prefix.pch";
-				HEADER_SEARCH_PATHS = "\"$(SOURCE_ROOT)/../RestKit/Build\"";
+				HEADER_SEARCH_PATHS = (
+					"\"$(SOURCE_ROOT)/../RestKit/Build\"",
+					"\"$(BUILT_PRODUCTS_DIR)/../../Headers\"",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRIVATE_HEADERS_FOLDER_PATH = "$(PUBLIC_HEADERS_FOLDER_PATH)/Private";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2017,6 +2048,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Code/StorageRoomKit-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)/../../Headers\"";
 				INFOPLIST_FILE = "Specs/StorageRoomKitSpecs-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = ../Kiwi/Kiwi;
@@ -2033,6 +2065,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Code/StorageRoomKit-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)/../../Headers\"";
 				INFOPLIST_FILE = "Specs/StorageRoomKitSpecs-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = ../Kiwi/Kiwi;
