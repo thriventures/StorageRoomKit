@@ -109,7 +109,7 @@ describe(@"objectManagerForAccountId:authenticationToken:ssl:host:", ^{
     it(@"should return configured RKObjectManager", ^{
         RKObjectManager *objectManager = [SRObjectManager objectManagerForAccountId:@"123" authenticationToken:@"token" ssl:YES host:@"custom.storageroomapp.com"];
         
-        [[[objectManager.client baseURL] should] equal:@"https://custom.storageroomapp.com/accounts/123"];
+        [[[objectManager.client baseURL] should] equal:[NSURL URLWithString:@"https://custom.storageroomapp.com/accounts/123"]];
         [[objectManager.client.username should] equal:@"token"];
         [[objectManager.client.password should] equal:@""];
         
@@ -121,7 +121,7 @@ describe(@"objectManagerForAccountId:authenticationToken:ssl:host:", ^{
         [[objectManager.serializationMIMEType should] equal:RKMIMETypeJSON];
         [[objectManager.acceptMIMEType should] equal:RKMIMETypeJSON];
         
-        RKObjectMapping *errorMapping = [objectManager.mappingProvider mappingForKeyPath:@"error"];
+        RKObjectMappingDefinition *errorMapping = [objectManager.mappingProvider mappingForKeyPath:@"error"];
         RKObjectAttributeMapping *attributeMapping = [[errorMapping attributeMappings] objectAtIndex:0];
         [[attributeMapping.sourceKeyPath should] equal:@"message"];
         [[attributeMapping.destinationKeyPath should] equal:@"errorMessage"];        
@@ -138,7 +138,7 @@ describe(@"objectManagerForAccountId:authenticationToken:", ^{
     it(@"should return configured RKObjectManager", ^{
         RKObjectManager *objectManager = [SRObjectManager objectManagerForAccountId:@"123" authenticationToken:@"token"];
 
-        [[[objectManager.client baseURL] should] equal:@"https://api.storageroomapp.com/accounts/123"];
+        [[[objectManager.client baseURL] should] equal:[NSURL URLWithString:@"https://api.storageroomapp.com/accounts/123"]];
         [[objectManager.client.username should] equal:@"token"];
         [[objectManager.client.password should] equal:@""];
         

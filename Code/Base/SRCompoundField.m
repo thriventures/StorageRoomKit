@@ -18,7 +18,7 @@
     [[self class] addRelationshipWithName:self.identifier relationshipMapping:[self relationshipMapping] toObjectMapping:anObjectMapping];
 }
 
-- (NSObject <RKObjectMappingDefinition> *)relationshipMapping {
+- (RKObjectMappingDefinition *)relationshipMapping {
     NSString *className = NSStringFromClass([self class]);
     NSUInteger index = [className length] - [@"Field" length];
     NSString *targetClassName = [className substringToIndex:index];

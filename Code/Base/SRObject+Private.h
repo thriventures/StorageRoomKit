@@ -13,12 +13,12 @@
 + (BOOL)isCustomMapping;
 + (RKObjectMapping *)concreteMapping;
 + (RKDynamicObjectMapping *)dynamicMapping;
-+ (NSObject<RKObjectMappingDefinition> *)customMapping;
++ (RKObjectMappingDefinition *)customMapping;
 + (BOOL)hasInverseObjectMapping;
 
 + (void)addAttributeWithName:(NSString *)aName toObjectMapping:(RKObjectMapping *)anObjectMapping;
 + (void)addMetaDataWithName:(NSString *)aName toObjectMapping:(RKObjectMapping *)anObjectMapping;
-+ (void)addRelationshipWithName:(NSString *)aName relationshipMapping:(NSObject <RKObjectMappingDefinition> *)aRelationshipMapping toObjectMapping:(RKObjectMapping *)anObjectMapping;
++ (void)addRelationshipWithName:(NSString *)aName relationshipMapping:(RKObjectMappingDefinition *)aRelationshipMapping toObjectMapping:(RKObjectMapping *)anObjectMapping;
 
 + (void)addAttributes:(NSArray *)anArray toObjectMapping:(RKObjectMapping *)anObjectMapping;
 + (void)addMetaData:(NSArray *)anArray toObjectMapping:(RKObjectMapping *)anObjectMapping;

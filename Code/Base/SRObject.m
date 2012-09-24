@@ -24,7 +24,7 @@
 #pragma mark - 
 #pragma mark SRMappable Protocol
 
-+ (NSObject<RKObjectMappingDefinition> *)objectMapping { 
++ (RKObjectMappingDefinition *)objectMapping { 
     if ([self isCustomMapping]) {
         return [self customMapping];
     }
@@ -34,7 +34,7 @@
 }
 
 + (RKObjectMapping *)inverseObjectMapping {
-    NSObject<RKObjectMappingDefinition> *mapping = [self objectMapping];
+    RKObjectMappingDefinition *mapping = [self objectMapping];
     
     if ([self hasInverseObjectMapping] && [mapping isKindOfClass:[RKObjectMapping class]]) {
         return [(RKObjectMapping *)mapping inverseMapping];
@@ -107,7 +107,7 @@
 #pragma mark Mapping Helper Methods
 
 
-+ (NSObject<RKObjectMappingDefinition> *)customMapping {
++ (RKObjectMappingDefinition *)customMapping {
     static SREntryMappingDelegate *delegate = nil;
     
     if (!delegate) {
@@ -127,7 +127,7 @@
     RKLogDebug(@"Creating dynamic mapping for %@", [self objectType]);
     
     for (Class klass in SRSubclasses(self)) {
-        NSObject <RKObjectMappingDefinition> *mapping = [klass objectMapping];
+        RKObjectMappingDefinition *mapping = [klass objectMapping];
         
         if ([mapping isKindOfClass:[RKObjectMapping class]]) {
             RKObjectMapping *objectMapping = (RKObjectMapping *)mapping;
@@ -185,7 +185,7 @@
     [anObjectMapping addAttributeMapping:attributeMapping];
 }
 
-+ (void)addRelationshipWithName:(NSString *)aName relationshipMapping:(NSObject <RKObjectMappingDefinition> *)aRelationshipMapping toObjectMapping:(RKObjectMapping *)anObjectMapping {
++ (void)addRelationshipWithName:(NSString *)aName relationshipMapping:(RKObjectMappingDefinition *)aRelationshipMapping toObjectMapping:(RKObjectMapping *)anObjectMapping {
     RKObjectRelationshipMapping *relationshipMapping = [RKObjectRelationshipMapping mappingFromKeyPath:aName toKeyPath:SRIdentifierToObjectiveC(aName) withMapping:aRelationshipMapping];
     [anObjectMapping addAttributeMapping:relationshipMapping];
 }

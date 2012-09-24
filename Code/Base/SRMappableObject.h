@@ -6,7 +6,7 @@
 //  Copyright 2011 Thriventures. All rights reserved.
 //
 
-@protocol RKObjectMappingDefinition;
+@class RKObjectMappingDefinition;
 @class RKObjectMapping;
 
 /**
@@ -17,7 +17,7 @@
 /**
  * The object mapping for the class.
  */
-+ (NSObject<RKObjectMappingDefinition> *)objectMapping;
++ (RKObjectMappingDefinition *)objectMapping;
 
 /**
  * The inverse object mapping used for serialization.

@@ -140,7 +140,7 @@ describe(@"ClassMethods", ^{
                     [[[relationshipMapping destinationKeyPath] should] equal:@"webhookDefinitions"];                                        
                 }
                 
-                NSObject <RKObjectMappingDefinition> *destinationMapping = [relationshipMapping mapping];
+                RKObjectMappingDefinition *destinationMapping = [relationshipMapping mapping];
                 [[destinationMapping should] beKindOfClass:[RKDynamicObjectMapping class]];
             }
         });

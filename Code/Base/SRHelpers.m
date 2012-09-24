@@ -40,7 +40,7 @@ NSString *SRDeletedEntriesPath(void) {
 }
 
 NSString *SRDeletedEntriesForCollection(NSString *collectionUrl) {
-    return RKPathAppendQueryParams(SRDeletedEntriesPath(), [NSDictionary dictionaryWithObject:collectionUrl forKey:@"collection_url"]);
+    return [SRDeletedEntriesPath() stringByAppendingQueryParameters:[NSDictionary dictionaryWithObject:collectionUrl forKey:@"collection_url"]];
 }
 
 NSString *SRAbsoluteUrlToRelativePath(NSString *absoluteURL) { 
@@ -55,7 +55,7 @@ NSString *SRAbsoluteUrlToRelativePath(NSString *absoluteURL) {
 
 NSString *SRPathAppendQueryParams(NSString *resourcePath, NSDictionary *queryParams) {
 	if ([queryParams count] > 0) {
-        NSURL *url = RKMakeURL(resourcePath);
+        NSURL *url = [[RKClient sharedClient].baseURL URLByAppendingResourcePath:resourcePath];
         NSString *separator = [url query] ? @"&" : @"?";
         
 		return [NSString stringWithFormat:@"%@%@%@", resourcePath, separator, [queryParams URLEncodedString]];

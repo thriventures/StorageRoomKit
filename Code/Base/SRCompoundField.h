@@ -15,6 +15,6 @@
     
 }
 
-- (NSObject <RKObjectMappingDefinition> *)relationshipMapping;
+- (RKObjectMappingDefinition *)relationshipMapping;
 
 @end

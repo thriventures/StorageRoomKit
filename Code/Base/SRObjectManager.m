@@ -175,7 +175,7 @@ static NSString *defaultHost = @"api.storageroomapp.com";
     NSString *protocol = ssl ? @"https" : @"http";
     NSString *baseUrl = [NSString stringWithFormat:@"%@://%@%@", protocol, aHost, SRAccountPath(anAccountId)];
     
-    if ((self = [super initWithBaseURL:baseUrl])) {
+    if ((self = [super initWithBaseURL:[NSURL URLWithString:baseUrl]])) {
         self.serializationMIMEType = RKMIMETypeJSON; 
         self.acceptMIMEType = RKMIMETypeJSON;
         
@@ -234,7 +234,7 @@ static NSString *defaultHost = @"api.storageroomapp.com";
         NSString *keyPath = [class objectKeyPath];
         
         if (keyPath) {
-            NSObject <RKObjectMappingDefinition> *objectMapping = [class objectMapping];  
+            RKObjectMappingDefinition *objectMapping = [class objectMapping];  
             
             RKLogDebug(@"Adding mapping: %@ with keyPath: %@ to mappingProvider", objectMapping, keyPath);                
             [self.mappingProvider setMapping:objectMapping forKeyPath:keyPath]; 
