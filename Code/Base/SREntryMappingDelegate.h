@@ -5,7 +5,7 @@
 //  Created by Sascha Konietzke on 8/9/11.
 //  Copyright 2011 Thriventures. All rights reserved.
 //
-
+#import <RestKit/RestKit.h>
 
 /**
  * Returns the appropriate RKObjectMapping for a StorageRoom Resource based on the "@type" attribute.
