@@ -6,6 +6,7 @@
 //  Copyright 2011 Thriventures. All rights reserved.
 //
 
+#import <RestKit/RestKit.h>
 
 /**
  * An extended version of RKObjectMappingProvider that contains custom methods to support the StorageRoom API.

@@ -11,6 +11,7 @@
 #import <objc/runtime.h>
 #import "SRHelpers.h"
 
+#import <RestKit/RestKit.h>
 
 id getterImplementation(id self, SEL _cmd);
 void setterImplementation(id self, SEL _cmd, id aValue);

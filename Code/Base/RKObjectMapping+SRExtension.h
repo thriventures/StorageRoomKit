@@ -6,6 +6,7 @@
 //  Copyright 2011 Thriventures. All rights reserved.
 //
 
+#import <RestKit/RestKit.h>
 
 /**
  * StorageRoomKit additions to RKObjectMapping.
