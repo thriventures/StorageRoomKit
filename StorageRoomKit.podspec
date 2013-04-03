@@ -6,8 +6,8 @@ Pod::Spec.new do |s|
   s.homepage	= "https://github.com/thriventures/StorageRoomKit"
   s.license     = { :type => "MIT License. Copyright 2012 Thriventures UG (haftungsbeschränkt)",
                 :file => "LICENSE" }
-  s.authors	= { "Sascha Konietzke" => ""}
-  s.source	= { :git => "https://github.com/andreacremaschi/StorageRoomKit.git", :tag => s.version.to_s }
+  s.authors	= { "Sascha Konietzke" => "sascha@thriventures.com"}
+  s.source	= { :git => "https://github.com/thriventures/StorageRoomKit.git", :tag => s.version.to_s }
 
   s.requires_arc = false
 

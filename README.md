@@ -147,6 +147,13 @@ Please create an issue on GitHub if you discover any bugs.
 
 http://github.com/thriventures/StorageRoomKit/issues
 
+Contributions
+------------------------------
+
+Thanks a lot to all contributors.
+
+- @andreacremaschi: Cocoapods support
+
 License
 ------------------------------
 
