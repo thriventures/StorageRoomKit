@@ -15,6 +15,14 @@ Main Features
 * ... and many more handy features that RestKit offers
 
 
+Cocoapods
+------------------------------
+
+You can install StorageRoomKit through Cocoapods:
+
+`pod search 'StorageRoomKit'`
+
+
 Installation into your Project
 ------------------------------
 
